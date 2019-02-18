@@ -1,0 +1,32 @@
+﻿@model List<InGame.Api.Models.CategoryResponseModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h2>Categories</h2>
+
+<a asp-action="Create" asp-controller="Category" class="btn btn-dark">Add Category</a>
+
+<table class="table-bordered">
+    @foreach (var category in Model)
+    {
+    <tr>
+        <td>
+            <span>@category.Name</span>
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@category.Id" asp-route-parentid="@category.ParentCategoryId" asp-route-name="@category.Name" asp-controller="Category" class="btn btn-warning">Edit</a>
+        </td>
+        <td>
+            <a asp-action="Delete" asp-route-id="@category.Id" asp-route-parentid="@category.ParentCategoryId" asp-route-name="@category.Name" asp-controller="Category" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    }
+
+
+
+</table>
+
+
+

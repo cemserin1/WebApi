@@ -1,0 +1,44 @@
+﻿@model InGame.Web.Models.CategoryModel
+@{
+}
+@if (Model.Id > 0)
+{
+    <h1>Update</h1>
+}
+else
+{
+    <h1>Create</h1>
+}
+@if (Model.Id > 0)
+{
+    <form class="m-1 p-1" asp-action="Edit" method="post">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        @Html.HiddenFor(m => m.Id)
+
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <label>Parent Category</label>
+        @Html.DropDownListFor(m => m.ParentCategoryId, (IEnumerable<SelectListItem>)ViewBag.Categories, null, new { @class = "form-control" })
+        <br />
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    </form>
+}
+else
+{
+    <form class="m-1 p-1" asp-action="Create" method="post">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        @Html.HiddenFor(m => m.Id)
+
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <label>Parent Category</label>
+        @Html.DropDownListFor(m => m.ParentCategoryId, (IEnumerable<SelectListItem>)ViewBag.Categories, null, new { @class = "form-control" })
+        <br />
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    </form>
+}
+

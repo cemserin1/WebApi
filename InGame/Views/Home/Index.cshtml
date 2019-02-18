@@ -1,0 +1,18 @@
+﻿
+@model InGame.Web.Models.LoginModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Login" method="post">
+    @*<input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />*@
+    <div class="col-sm-12">
+        <input asp-for="Email" class="form-control" style="width:300px; text-align:left" placeholder="Email" />
+    </div>
+    <div class="col-sm-12">
+        <input asp-for="Password" class="form-control" style="width:300px;" placeholder="Password" />
+    </div><br />
+    <div class="col-sm-12">
+        <input type="submit" class="btn btn-primary" value="Login">
+    </div>
+</form>

@@ -1,0 +1,17 @@
+D:\users\ocems\source\repos\InGame\InGame.Api\bin\Debug\netcoreapp2.2\InGame.Api.deps.json
+D:\users\ocems\source\repos\InGame\InGame.Api\bin\Debug\netcoreapp2.2\InGame.Api.runtimeconfig.json
+D:\users\ocems\source\repos\InGame\InGame.Api\bin\Debug\netcoreapp2.2\InGame.Api.runtimeconfig.dev.json
+D:\users\ocems\source\repos\InGame\InGame.Api\bin\Debug\netcoreapp2.2\InGame.Api.dll
+D:\users\ocems\source\repos\InGame\InGame.Api\bin\Debug\netcoreapp2.2\InGame.Api.pdb
+D:\users\ocems\source\repos\InGame\InGame.Api\bin\Debug\netcoreapp2.2\InGame.DAL.dll
+D:\users\ocems\source\repos\InGame\InGame.Api\bin\Debug\netcoreapp2.2\InGame.DAL.pdb
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.csprojAssemblyReference.cache
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.csproj.CoreCompileInputs.cache
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.RazorAssemblyInfo.cache
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.RazorAssemblyInfo.cs
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.AssemblyInfoInputs.cache
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.AssemblyInfo.cs
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.RazorTargetAssemblyInfo.cache
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.csproj.CopyComplete
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.dll
+D:\users\ocems\source\repos\InGame\InGame.Api\obj\Debug\netcoreapp2.2\InGame.Api.pdb

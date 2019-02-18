@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InGame.Web", "InGame\InGame.Web.csproj", "{4129BFAF-478A-4769-90E2-26FE2B5C1B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InGame.Api", "InGame.Api\InGame.Api.csproj", "{5866B3BF-4C33-4F4F-946E-A66821BC70C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InGame.DAL", "InGame.DAL\InGame.DAL.csproj", "{D7DB194A-3D2C-4C28-8261-8F77B23CE6A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4129BFAF-478A-4769-90E2-26FE2B5C1B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4129BFAF-478A-4769-90E2-26FE2B5C1B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4129BFAF-478A-4769-90E2-26FE2B5C1B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4129BFAF-478A-4769-90E2-26FE2B5C1B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5866B3BF-4C33-4F4F-946E-A66821BC70C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5866B3BF-4C33-4F4F-946E-A66821BC70C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5866B3BF-4C33-4F4F-946E-A66821BC70C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5866B3BF-4C33-4F4F-946E-A66821BC70C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7DB194A-3D2C-4C28-8261-8F77B23CE6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7DB194A-3D2C-4C28-8261-8F77B23CE6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7DB194A-3D2C-4C28-8261-8F77B23CE6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7DB194A-3D2C-4C28-8261-8F77B23CE6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B250FD07-406C-4FE4-8F6B-D1AAF1138C27}
+	EndGlobalSection
+EndGlobal

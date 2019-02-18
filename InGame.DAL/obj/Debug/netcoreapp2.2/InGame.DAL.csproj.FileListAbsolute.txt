@@ -1,0 +1,16 @@
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\InGame.DAL.deps.json
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\InGame.DAL.dll
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\InGame.DAL.pdb
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.dll
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.dll
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.xml
+D:\users\ocems\source\repos\InGame\InGame.DAL\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.xml
+D:\users\ocems\source\repos\InGame\InGame.DAL\obj\Debug\netcoreapp2.2\InGame.DAL.csproj.CoreCompileInputs.cache
+D:\users\ocems\source\repos\InGame\InGame.DAL\obj\Debug\netcoreapp2.2\InGame.DAL.AssemblyInfoInputs.cache
+D:\users\ocems\source\repos\InGame\InGame.DAL\obj\Debug\netcoreapp2.2\InGame.DAL.AssemblyInfo.cs
+D:\users\ocems\source\repos\InGame\InGame.DAL\obj\Debug\netcoreapp2.2\InGame.DAL.csproj.CopyComplete
+D:\users\ocems\source\repos\InGame\InGame.DAL\obj\Debug\netcoreapp2.2\InGame.DAL.dll
+D:\users\ocems\source\repos\InGame\InGame.DAL\obj\Debug\netcoreapp2.2\InGame.DAL.pdb
+D:\users\ocems\source\repos\InGame\InGame.DAL\obj\Debug\netcoreapp2.2\InGame.DAL.csprojAssemblyReference.cache
