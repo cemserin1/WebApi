@@ -9,19 +9,28 @@
 <a asp-action="Create" asp-controller="Category" class="btn btn-dark">Add Category</a>
 
 <table class="table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+
+            <th colspan="2" class="text-center">Actions</th>
+        </tr>
+    </thead>
     @foreach (var category in Model)
     {
-    <tr>
-        <td>
-            <span>@category.Name</span>
-        </td>
-        <td>
-            <a asp-action="Edit" asp-route-id="@category.Id" asp-route-parentid="@category.ParentCategoryId" asp-route-name="@category.Name" asp-controller="Category" class="btn btn-warning">Edit</a>
-        </td>
-        <td>
-            <a asp-action="Delete" asp-route-id="@category.Id" asp-route-parentid="@category.ParentCategoryId" asp-route-name="@category.Name" asp-controller="Category" class="btn btn-danger">Delete</a>
-        </td>
-    </tr>
+        <tr>
+            <td>
+                <span>@category.Name</span>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@category.Id" asp-route-parentid="@category.ParentCategoryId" asp-route-name="@category.Name" asp-controller="Category" class="btn btn-warning">Edit</a>
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@category.Id" asp-route-parentid="@category.ParentCategoryId" asp-route-name="@category.Name" asp-controller="Category" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
     }
 
 

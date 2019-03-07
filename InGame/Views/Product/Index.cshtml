@@ -1,0 +1,52 @@
+﻿@model List<InGame.Api.Models.ProductResponseModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h2>Products</h2>
+
+<a asp-action="Create" asp-controller="Product" class="btn btn-dark">Add Product</a>
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Category
+            </th>
+            <th colspan="2" class="text-center">Actions</th>
+        </tr>
+    </thead>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>
+                <span>@product.Name</span>
+            </td>
+            <td>
+                <span>@product.Price</span>
+            </td>
+            <td>
+                <span>@product.Description</span>
+            </td>
+            <td>
+                <span>@product.CategoryId</span>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@product.Id" asp-route-name="@product.Name" asp-controller="Product" class="btn btn-warning">Edit</a>
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@product.Id" asp-route-name="@product.Name" asp-controller="Product" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
