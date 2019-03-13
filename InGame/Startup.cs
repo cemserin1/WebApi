@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RestSharp;
 
 namespace InGame
 {
@@ -31,6 +32,7 @@ namespace InGame
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            services.AddTransient<IRestClient, RestClient>();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

@@ -13,5 +13,6 @@ namespace InGame.DAL.Models
         public string ImageUrl { get; set; }
         public bool IsActive { get; set; }
         public string Description { get; set; }
+        public Category Category { get; set; }
     }
 }

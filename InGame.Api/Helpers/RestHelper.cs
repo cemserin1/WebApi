@@ -9,6 +9,8 @@ namespace InGame.Api.Helpers
 {
     public static class RestHelper
     {
+        
+
         public static async Task<List<T>> GetObjects<T>(Uri uri)
         {
             var client = new HttpClient();
@@ -28,6 +30,6 @@ namespace InGame.Api.Helpers
                 return new List<T>();
             }
             return returnobj;
-        }
+        }       
     }
 }

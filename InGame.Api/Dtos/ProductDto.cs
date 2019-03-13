@@ -16,6 +16,7 @@ namespace InGame.Api.Dtos
         public string ImageUrl { get; set; }
         public bool IsActive { get; set; }
         public string Description { get; set; }
+        public CategoryDto CategoryDto { get; set; }
 
         public ProductDto()
         {
@@ -31,6 +32,10 @@ namespace InGame.Api.Dtos
             ImageUrl = product.ImageUrl;
             IsActive = product.IsActive;
             Description = product.Description;
+            if (product.Category != null)
+            {
+                CategoryDto = new CategoryDto(product.Category);
+            }
         }
 
         public Product FromDto()
@@ -56,6 +61,7 @@ namespace InGame.Api.Dtos
             p.ImageUrl = ImageUrl;
             p.IsActive = IsActive;
             p.Description = Description;
+            p.CategoryDto = CategoryDto;
             return p;
         }
     }

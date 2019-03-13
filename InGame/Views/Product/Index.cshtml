@@ -39,13 +39,13 @@
                 <span>@product.Description</span>
             </td>
             <td>
-                <span>@product.CategoryId</span>
+                <span>@product.CategoryDto.Name</span>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@product.Id" asp-route-name="@product.Name" asp-controller="Product" class="btn btn-warning">Edit</a>
+                <a asp-action="Edit" asp-route-id="@product.Id" asp-controller="Product" class="btn btn-warning">Edit</a>
             </td>
             <td>
-                <a asp-action="Delete" asp-route-id="@product.Id" asp-route-name="@product.Name" asp-controller="Product" class="btn btn-danger">Delete</a>
+                <a asp-action="Delete" asp-route-id="@product.Id" asp-controller="Product" class="btn btn-danger">Delete</a>
             </td>
         </tr>
     }

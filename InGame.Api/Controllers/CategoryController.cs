@@ -36,15 +36,16 @@ namespace InGame.Api.Controllers
         //[HttpGet(Name = "GetChildCategories")]
         //public List<CategoryResponseModel> Get(long categoryId)
         //{
-         
+
         //}
 
-        //// GET: api/Category/5
-        //[HttpGet("{id}", Name = "GetCategoryById")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        // GET: api/Category/5
+        [HttpGet("{id}", Name = "GetCategoryById")]
+        public CategoryResponseModel Get(long id)
+        {
+            var category = categoryService.Get(id).ToResponseModel();
+            return category;
+        }
 
         // POST: api/Category
         [HttpPost]

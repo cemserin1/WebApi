@@ -13,28 +13,28 @@ using InGame.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Text;
 using Newtonsoft.Json;
+using RestSharp;
 
 namespace InGame.Controllers
 {
     public class HomeController : Controller
     {
         private readonly Uri Uri;
+        private IRestClient restClient;
 
-        public HomeController()
+        public HomeController(IRestClient _restClient)
         {
+            restClient = _restClient;
             Uri = new Uri("https://localhost:44358");
+            restClient.BaseUrl = Uri;
         }
 
         public async Task<IActionResult> Index()
-        {            
-            var productList = await RestHelper.GetObjects<ProductResponseModel>(new Uri(Uri, "/api/product"));
-            return View();
-        }
-
-
-        public IActionResult Login()
         {
-            return View("Test");
+            //var request = new RestRequest(Uri + "api/product/1", Method.GET, DataFormat.Json);
+            //IRestResponse response = restClient.Execute(request);
+            //var content = response.Content; // raw content as string
+            return View();
         }
 
         [AllowAnonymous]
@@ -43,24 +43,29 @@ namespace InGame.Controllers
         public async Task<IActionResult> Login(LoginModel model, string returnUrl)
         {
             ViewBag.returnUrl = returnUrl;
-            using (HttpClient client = new HttpClient())
+            if (ModelState.IsValid)
             {
-                var jsonObject = JsonConvert.SerializeObject(model);
-                var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(new Uri(Uri, "/api/account"), content);
-                var responseContent = await response.Content.ReadAsStringAsync();
-                var user = JsonConvert.DeserializeObject<UserResponseModel>(responseContent);
-                if (user.IsSuccessful)
+                using (HttpClient client = new HttpClient())
                 {
-                    //Login successful
-                    return RedirectToAction("Index", "Category");
-                }
-                else
-                {
-                    ModelState.AddModelError("Email", "Invalid Email or Password");
-                    return View();
+                    var jsonObject = JsonConvert.SerializeObject(model);
+                    var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
+                    var response = await client.PostAsync(new Uri(Uri, "/api/account"), content);
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    var user = JsonConvert.DeserializeObject<UserResponseModel>(responseContent);
+                    if (user.IsSuccessful)
+                    {
+                        //Login successful
+                        return RedirectToAction("Index", "Category");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("Email", "Invalid Email or Password");
+                        return View("Index", model);
+                    }
                 }
             }
+            return View("Index", model);
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

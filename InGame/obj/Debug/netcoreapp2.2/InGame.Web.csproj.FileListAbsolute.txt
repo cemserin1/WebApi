@@ -37,3 +37,5 @@ D:\users\ocems\source\repos\InGame\InGame\obj\Debug\netcoreapp2.2\InGame.Web.dll
 D:\users\ocems\source\repos\InGame\InGame\obj\Debug\netcoreapp2.2\InGame.Web.pdb
 D:\users\ocems\source\repos\InGame\InGame\obj\Debug\netcoreapp2.2\Razor\Views\Category\Create.g.cshtml.cs
 D:\users\ocems\source\repos\InGame\InGame\obj\Debug\netcoreapp2.2\Razor\Views\Product\Index.g.cshtml.cs
+D:\users\ocems\source\repos\InGame\InGame\obj\Debug\netcoreapp2.2\Razor\Views\Product\Create.g.cshtml.cs
+D:\users\ocems\source\repos\InGame\InGame\obj\Debug\netcoreapp2.2\Razor\Views\Shared\CategoryDropDown.g.cshtml.cs

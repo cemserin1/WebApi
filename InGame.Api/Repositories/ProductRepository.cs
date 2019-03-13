@@ -1,10 +1,9 @@
 ﻿using InGame.Api.Interfaces;
 using InGame.DAL;
 using InGame.DAL.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace InGame.Api.Repositories
 {
@@ -20,6 +19,7 @@ namespace InGame.Api.Repositories
         public void Add(Product p)
         {
             context.Product.Add(p);
+            context.SaveChanges();
         }
 
         public void Delete(long id)
@@ -39,7 +39,7 @@ namespace InGame.Api.Repositories
 
         public IQueryable<Product> Get()
         {
-            return context.Product.AsQueryable();
+            return context.Product.Include(p => p.Category).AsQueryable();
         }
 
         public long Update(Product p)

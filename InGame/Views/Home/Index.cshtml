@@ -5,6 +5,7 @@
 }
 
 <form asp-action="Login" method="post">
+    <div class="text-danger" asp-validation-summary="All"></div>
     @*<input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />*@
     <div class="col-sm-12">
         <input asp-for="Email" class="form-control" style="width:300px; text-align:left" placeholder="Email" />
