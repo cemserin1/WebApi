@@ -32,7 +32,7 @@ namespace InGame.Web.Controllers
             //var childCategories = await RestHelper.GetObjects<CategoryResponseModel>(new Uri(Uri, "/api/category/GetChildCategories?categoryId=2"));
             return View(productList);
         }
-        public async Task<IActionResult> Edit(long id, string name, long parentid)
+        public async Task<IActionResult> Edit(long id)
         {
             var request = new RestRequest(Uri + "api/product/" + id, Method.GET, DataFormat.Json);
             //request.AddParameter("id", id);
@@ -45,31 +45,32 @@ namespace InGame.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(CategoryModel model)
+        public async Task<IActionResult> Edit(ProductModel model)
         {
-            var categoryList = await RestHelper.GetObjects<CategoryResponseModel>(new Uri(Uri, "/api/category"));
-            categoryList.Insert(0, new CategoryResponseModel() { Id = 0, Name = "No Category", ParentCategoryId = 0 });
-            ViewBag.Categories = new SelectList(categoryList, "Id", "Name");
             if (ModelState.IsValid)
             {
-                using (HttpClient client = new HttpClient())
-                {
-                    var jsonObject = JsonConvert.SerializeObject(model);
-                    var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
-                    var response = await client.PutAsync(new Uri(Uri, "/api/category"), content);
-                    return RedirectToAction("Index");
-                }
+                var request = new RestRequest(Uri + "api/product/" + model.Id, Method.PUT, DataFormat.Json);
+                request.AddJsonBody(JsonConvert.SerializeObject(model));
+                var response = restClient.Execute(request);
+                return RedirectToAction("Index");
+                //using (HttpClient client = new HttpClient())
+                //{
+                //    var jsonObject = JsonConvert.SerializeObject(model);
+                //    var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
+                //    var response = await client.PutAsync(new Uri(Uri, "/api/category"), content);
+                //    return RedirectToAction("Index");
+                //}
             }
             return View("Create", model);
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            var productList = await RestHelper.GetObjects<ProductResponseModel>(new Uri(Uri, "/api/product"));
-            var categoryList = await RestHelper.GetObjects<CategoryResponseModel>(new Uri(Uri, "/api/category"));
-            categoryList.Insert(0, new CategoryResponseModel() { Id = 0, Name = "No Category", ParentCategoryId = 0 });
-            ViewBag.Categories = new SelectList(categoryList, "Id", "Name");
-            ViewBag.Products = new SelectList(productList, "Id", "Name");
+            //var productList = await RestHelper.GetObjects<ProductResponseModel>(new Uri(Uri, "/api/product"));
+            //var categoryList = await RestHelper.GetObjects<CategoryResponseModel>(new Uri(Uri, "/api/category"));
+            //categoryList.Insert(0, new CategoryResponseModel() { Id = 0, Name = "No Category", ParentCategoryId = 0 });
+            //ViewBag.Categories = new SelectList(categoryList, "Id", "Name");
+            //ViewBag.Products = new SelectList(productList, "Id", "Name");
             return View(new ProductModel() { Id = 0 });
         }
         [HttpPost]

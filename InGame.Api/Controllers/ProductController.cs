@@ -51,13 +51,18 @@ namespace InGame.Api.Controllers
         [HttpPut("{id}")]
         public void Put(int id, ProductRequestModel model)
         {
-            var productToBeUpdated = productService.Get(id);
-            productToBeUpdated.CategoryId = model.CategoryId;
-            productToBeUpdated.Description = model.Description;
-            productToBeUpdated.ImageUrl = model.ImageUrl;
-            productToBeUpdated.Name = model.Name;
-            productToBeUpdated.Price = model.Price;
-            productService.Update(productToBeUpdated);
+            //could be improved
+            if (ModelState.IsValid)
+            {
+                var productToBeUpdated = productService.Get(id);
+                productToBeUpdated.CategoryId = model.CategoryId;
+                productToBeUpdated.Description = model.Description;
+                productToBeUpdated.ImageUrl = model.ImageUrl;
+                productToBeUpdated.Name = model.Name;
+                productToBeUpdated.Price = model.Price;
+                productToBeUpdated.IsActive = model.IsActive;
+                productService.Update(productToBeUpdated);
+            }            
         }
 
         // DELETE: api/ApiWithActions/5

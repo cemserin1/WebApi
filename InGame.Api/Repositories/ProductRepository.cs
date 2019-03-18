@@ -47,7 +47,7 @@ namespace InGame.Api.Repositories
             var product = context.Product.FirstOrDefault(pr => pr.Id == p.Id);
             if (product != null)
             {
-                product = p;
+                context.Entry(product).CurrentValues.SetValues(p);
                 context.SaveChanges();
             }
             return p.Id;

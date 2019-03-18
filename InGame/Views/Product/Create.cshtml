@@ -30,9 +30,13 @@ else
             <label asp-for="Description">Description</label>
             <input asp-for="Description" class="form-control" />
         </div>
-        @*<label>Category</label>
-        @Html.DropDownListFor(m => m.CategoryId, (IEnumerable<SelectListItem>)ViewBag.Categories, null, new { @class = "form-control" })*@
+        <label>Category</label>
+        @{await Html.RenderPartialAsync("CategoryDropDown", new InGame.Web.Models.CategoryDropDownModel());}
         <br />
+        <div class="form-group">
+            <label asp-for="IsActive">Is Active?</label>
+            <input asp-for="IsActive" class="" type="checkbox"/>
+        </div>
         <input type="submit" class="btn btn-primary" value="Submit" />
     </form>
 }
@@ -58,8 +62,14 @@ else
             <label asp-for="Description">Description</label>
             <input asp-for="Description" class="form-control" />
         </div>
-        @*<label>Category</label>
-        @Html.DropDownListFor(m => m.CategoryId, (IEnumerable<SelectListItem>)ViewBag.Categories, null, new { @class = "form-control" })*@
+        @{await Html.RenderPartialAsync("CategoryDropDown", new InGame.Web.Models.CategoryDropDownModel());}
+        <br />
+        <div class="form-group">
+            <label asp-for="IsActive">Is Active?</label>
+            <input asp-for="IsActive" class="" type="checkbox" />
+        </div>
+
+        
         <br />
         <input type="submit" class="btn btn-primary" value="Submit" />
     </form>

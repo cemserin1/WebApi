@@ -21,32 +21,40 @@
                 Description
             </th>
             <th>
+                Is Active
+            </th>
+            <th>
                 Category
             </th>
+
             <th colspan="2" class="text-center">Actions</th>
         </tr>
     </thead>
     @foreach (var product in Model)
     {
-        <tr>
-            <td>
-                <span>@product.Name</span>
-            </td>
-            <td>
-                <span>@product.Price</span>
-            </td>
-            <td>
-                <span>@product.Description</span>
-            </td>
-            <td>
-                <span>@product.CategoryDto.Name</span>
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@product.Id" asp-controller="Product" class="btn btn-warning">Edit</a>
-            </td>
-            <td>
-                <a asp-action="Delete" asp-route-id="@product.Id" asp-controller="Product" class="btn btn-danger">Delete</a>
-            </td>
-        </tr>
+    <tr>
+        <td>
+            <span>@product.Name</span>
+        </td>
+        <td>
+            <span>@product.Price</span>
+        </td>
+        <td>
+            <span>@product.Description</span>
+        </td>
+        <td>
+            <span>@product.IsActive</span>
+        </td>
+        <td>
+            <span>@product.CategoryDto.Name</span>
+        </td>
+        
+        <td>
+            <a asp-action="Edit" asp-route-id="@product.Id" asp-controller="Product" class="btn btn-warning">Edit</a>
+        </td>
+        <td>
+            <a asp-action="Delete" asp-route-id="@product.Id" asp-controller="Product" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
     }
 </table>

@@ -29,11 +29,8 @@ namespace InGame.Controllers
             restClient.BaseUrl = Uri;
         }
 
-        public async Task<IActionResult> Index()
-        {
-            //var request = new RestRequest(Uri + "api/product/1", Method.GET, DataFormat.Json);
-            //IRestResponse response = restClient.Execute(request);
-            //var content = response.Content; // raw content as string
+        public IActionResult Index()
+        {            
             return View();
         }
 
